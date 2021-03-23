@@ -22,4 +22,4 @@ Configuration of FreeRTOS must be done in `$(ProjectDir)\FreeRTOS\Source\FreeRTO
 
 ### FreeRTOS Heap Memory
 This repository uses heap_4.c to handle dynamic memory/heap therefore it is **required to define how much RAM we will allocate for heap use**. This is done by defining
-`#define configTOTAL_HEAP_SIZE 52k` in the configuration file `\FreeRTOS\Source\FreeRTOSConfig.h`. In this example it is defined to 4000 bytes.
+`#define configTOTAL_HEAP_SIZE ( ( size_t ) ( 52 * 1024 ) )` in the configuration file `\FreeRTOS\Source\FreeRTOSConfig.h`. In this example it is defined to 52 kbytes.
